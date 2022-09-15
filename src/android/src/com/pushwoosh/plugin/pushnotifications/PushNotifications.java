@@ -229,7 +229,7 @@ public class PushNotifications extends CordovaPlugin {
 			return false;
 		}
 		callbackIds.put("setTags", callbackContext);
-
+		PWLog.debug(TAG, "ASDFGHJ: " + data, e);
 		Pushwoosh.getInstance().sendTags(Tags.fromJson(params), new Callback<Void, PushwooshException>() {
 			@Override
 			public void process(@NonNull final Result<Void, PushwooshException> result) {
